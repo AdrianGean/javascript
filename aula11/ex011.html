@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(156, 156, 156);
+            color: white;
+        }
+
+        input {
+            border-radius: 4px;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>País de nascimento</h1>
+    <p>Digite seu país:</p>
+    <input type="text" name="paistxt" id="paistxt" placeholder="Seu país de nascimento é">
+    <input type="button" value="Confirmar" onclick="confirma()">
+    <div id="res">
+
+    </div>
+
+    <script>
+        function confirma () {
+            var loca = window.document.querySelector ('input#paistxt')
+            var res = window.document.querySelector ('div#res')
+            var txt = String(loca.value)
+            res.innerHTML = `Seu país de nascimento é ${txt }`
+            if (loca.value == 'Brasil') {
+                res.innerHTML += `<p>Você é Brasileiro, PARABÉNS</p>`
+            } else {
+                res.innerHTML += `<p>Você é estranho seu esquisito</p>`
+            }
+            res.innerHTML += `<p>Continue a sua jornada amigo!</p>`
+        }
+    </script>
+</body>
+</html>
