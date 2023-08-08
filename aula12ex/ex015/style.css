@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+body {
+    background-color:#D9C0A3;
+    font: normal 15pt Arial;
+}
+
+header {
+    color: white;
+    text-align: center;
+}
+
+
+section {
+    background-color: rgb(240, 227, 227);
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.288);
+}
+
+input {
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0);
+}
+
+footer {
+    color: white;
+    text-align: center;
+    font-style: italic;
+}
+
+span:hover {
+    background-color: rgba(255, 255, 255, 0.425);
+    color: black;
+    cursor:pointer;
+    border-radius: 7px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.192);
+}
