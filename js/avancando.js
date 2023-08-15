@@ -19,4 +19,7 @@ const numeroPar = numeros.find((num) => num % 2 === 0)
 
 console.log(numeroPar)
 
-const numerosPares = 
+// filter retorna todos os elementos que batem com o critério
+const numerosPares = numeros.filter((num) => num % 2 === 0)
+
+console.log(numerosPares)
