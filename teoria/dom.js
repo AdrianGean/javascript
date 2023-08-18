@@ -127,7 +127,30 @@ form.addEventListener('submit', function (event) { // addEventListener ao enviar
     console.log('O formulário foi enviado')
 })
 
+
 // propagação de eventos
-document.querySelector('#elementoPai').addEventListener('click', function() {
-    
+document.querySelector('#elementoPai').addEventListener('click', function() { // Podemos adicionar um evento direto ao elemento
+    console.log('Clique capturado no pai') // eventos no elemento pai propagam no elemento filho, ao clicar no pai o evento é disparado, ao clicar no filho o evento também é disparado
 })
+
+document.querySelector('#elementoFilho').addEventListener('click', function(event) { // ao cliclar no elemento filho, tanto o evento do elemento pai, quanto do elemento filho serão disparados, aqui é 'feature', no projeto é bug. Podemos parar a propagação usando o argumento event com o método event.stopPropagation()
+    //event.stopPropagation()
+    console.log('Elemento Filho')
+
+})
+
+
+document.querySelector('#meuLink').addEventListener('click', function(event) {
+     event.preventDefault() // tira o comportamento padrão do elemento
+     console.log('clicou no link') // ao clicar no link a página não será redirecionada para o link do href, pois tiramos o comportamento padrão do elemento com o event.preventDefault()
+})
+
+
+// Delegação de eventos
+document.querySelector('#elementoPai').addEventListener('click', function(event) {
+    if(event.target.matches('.classeDosFilhos')) { // o event.target.matches() delega o evento para o elemento que estiver dentro dos parênteses, ou seja, ao clicarmos no elemento pai nenhum evento acontecerá, agora se clicarmos no elemento filho o evento disparará pois o evento foi delegado para ele através do elemento pai.
+        console.log('Evento delegado para o filho')
+    }
+})
+
+
