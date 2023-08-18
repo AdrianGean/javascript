@@ -128,4 +128,6 @@ form.addEventListener('submit', function (event) { // addEventListener ao enviar
 })
 
 // propagação de eventos
-
+document.querySelector('#elementoPai').addEventListener('click', function() {
+    
+})
