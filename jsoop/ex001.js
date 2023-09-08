@@ -213,26 +213,26 @@
 
 // console.log(veiculoA, veiculoB, veiculoC);
 
-// 27 - json
-const myJson =
-  '{"name": "Matheus","age": 31, "skills": ["PHP", "JavaScript", "Python"]}';
+// // 27 - json
+// const myJson =
+//   '{"name": "Matheus","age": 31, "skills": ["PHP", "JavaScript", "Python"]}';
 
 
 
-  // 28 - json para objeto e objeto para json
-const myObject = JSON.parse(myJson);
+//   // 28 - json para objeto e objeto para json
+// const myObject = JSON.parse(myJson);
 
-console.log(myObject);
+// console.log(myObject);
 
-// json invalido
-const badJson =
-  '{"name": Matheus,"age": 31, "skills": ["PHP", "JavaScript", "Python"]}';
+// // // json invalido
+// const badJson =
+//   '{"name": Matheus,"age": 31, "skills": ["PHP", "JavaScript", "Python"]}';
 
-// const myBadObject = JSON.parse(badJson);
-myObject.isOpenToWork = true;
+// // const myBadObject = JSON.parse(badJson);
+// myObject.isOpenToWork = true;
 
-const myNewJson = JSON.stringify(myObject);
+// const myNewJson = JSON.stringify(myObject);
 
-console.log(myNewJson);
+// console.log(myNewJson);
 
-console.log(typeof myNewJson);
+// console.log(typeof myNewJson);
